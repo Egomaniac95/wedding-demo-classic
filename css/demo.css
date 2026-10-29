@@ -1,0 +1,20 @@
+/* Ajustes de demostración; el diseño original se conserva en style.css. */
+.demo-banner{background:var(--dark);color:var(--white);font-family:var(--Montserrat);font-size:12px;text-align:center;padding:9px 18px;line-height:1.5;border-bottom:1px solid var(--color-primary)}
+.demo-code-hint{position:absolute;top:78%;left:5%;width:90%;font:14px var(--Montserrat);color:var(--dark);text-align:center;line-height:1.6}
+.demo-social{display:inline-block}
+.navigation nav .hamburger{border:0;background:transparent;color:inherit;padding:12px}
+header .caption .player{border:0;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer}
+header .caption #song{top:calc(105% + 80px);left:0;width:100%;margin:0;font-size:16px;background:transparent;color:var(--white);animation:none;text-shadow:0 1px 8px #000}
+.classic-music-toggle{position:fixed;bottom:20px;right:20px;z-index:5000000001;border:1px solid var(--color-primary);border-radius:30px;background:var(--dark);color:var(--white);padding:13px 19px;box-shadow:0 5px 25px #0003;display:flex;align-items:center;gap:10px;font:13px var(--Montserrat);cursor:pointer;min-height:44px}
+.classic-music-toggle[aria-pressed=true] .fa{color:var(--color-primary)}
+.owl-carousel-1:not(.owl-loaded){display:block}
+.owl-carousel-1:not(.owl-loaded) .item2{display:none}
+#prueba{width:min(1000px,94vw);padding:25px;gap:20px}
+#prueba .entradas,#prueba .special-message{max-width:900px;line-height:1.4}
+#prueba .footer{display:block;margin-top:10px;text-decoration:none}
+.logo-regalos img[src$="demo-payment.svg"]{background:#fff}
+:focus-visible{outline:3px solid var(--color-primary);outline-offset:4px}
+.events iframe{max-width:100%}
+@media(max-width:991px){.navigation nav .menu:not(.active){visibility:hidden;pointer-events:none}.navigation nav .menu.active{visibility:visible;pointer-events:auto}.navigation nav .hamburger .icon-bars{line-height:1}.navigation nav .menu{padding:8vh 0;overflow-y:auto;max-height:calc(100dvh - 65px)}}
+@media(max-width:600px){.demo-banner{font-size:10px}.demo-code-hint{font-size:12px;top:83%}#invitation_card_container .error-message{font-size:13px;padding:0 20px;top:73%}header .caption #song{top:calc(110% + 62px);font-size:12px}.classic-music-toggle{right:12px;bottom:12px;padding:12px 15px}#prueba{gap:14px}#prueba h1{font-size:3.2rem}#prueba .entradas,#prueba .special-message{font-size:2.1rem}#prueba .footer{font-size:1.4rem}}
+@media(prefers-reduced-motion:reduce){html:not([data-classic-motion='on']) *,html:not([data-classic-motion='on']) *::before,html:not([data-classic-motion='on']) *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}html:not([data-classic-motion='on']) .owl-carousel-1 .item{animation:none!important}}

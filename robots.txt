@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://egomaniac95.github.io/wedding-demo-classic/sitemap.xml

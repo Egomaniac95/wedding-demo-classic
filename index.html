@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dorado_naranja_borgona">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Invitación de boda clásica | Demo de diseño web</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Invitación de demostración con personas ficticias. Diseño clásico con música, carruseles y partículas.">
+
+     <!-- fontawesome 4 -->
+     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+
+     <!-- Tipografías locales con licencia OFL -->
+     <link rel="stylesheet" href="vendor/fonts/fonts.css">
+
+
+
+
+
+     <!-- owlcarousel  -->
+     <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+
+     <link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css">
+
+     <!-- owlcarousel  -->
+
+     <!-- particles.js -->
+
+     <!-- jquery cdn  -->
+
+
+     <!-- Bootstrap -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- CSS    -->
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/demo.css">
+     <link rel="stylesheet" href="css/refinements.css">
+  <link rel="canonical" href="https://egomaniac95.github.io/wedding-demo-classic/"><meta property="og:type" content="website"><meta property="og:title" content="Una invitación tan especial como tu historia"><meta property="og:description" content="Demo clásica de invitación digital: fotografías, música, animaciones y detalles para celebrar."><meta property="og:url" content="https://egomaniac95.github.io/wedding-demo-classic/"><meta property="og:image" content="https://egomaniac95.github.io/wedding-demo-classic/img/carousel-1.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="css/demo-promo.css">
+</head>
+  <body>
+    <div class="demo-banner">Muestra de diseño · Personas y familias ficticias · Código de acceso: <strong>GIFT</strong></div>
+
+    <!---------------------- audio is invisible ------------------->
+    <div class="music">
+      <audio src="./audio/celebracion-demo.wav" id="my_audio" loop="loop"></audio>
+    </div>
+
+    <!---------------------- navigation starts here ------------------->
+    <div class="navigation nav-hide-show">
+
+      <nav class="inner">
+        <div class="logo">
+          <a href="#" data-wedding-logo>Gabriel <span class="jr">&</span> Elena</a>
+        </div>
+
+        <ul class="menu" id="wedding-menu">
+          <li><a class="active" href="#">FECHA</a></li>
+          <li><a href="#about">NOSOTROS</a></li>
+          <li><a href="#event-section">LA BODA</a></li>
+          <li><a href="#Protocol-section">RECOMENDACIONES</a></li>
+          <li><a href="#regalos">REGALOS</a></li>
+          <li><a href="#family">FAMILIA</a></li>
+        </ul>
+
+        <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="wedding-menu"><i class="icon-bars fa fa-bars" aria-hidden="true"></i></button>
+      </nav>
+
+    </div>
+
+
+    <!---------------------- navigation ends here ------------------->
+
+    <!---------------------- Carousel-section  starts here ------------------->
+
+    <header>
+
+      <div class="owl-carousel owl-theme owl-carousel-1">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+      </div>
+
+      <div class="caption">
+        <h1 data-wedding-couple>Gabriel & Elena</h1>
+        <h2>¡ NOS CASAMOS !</h2>
+        <!---------------------- countdown------------------->
+        <div class="countdown" >
+          <div class="countdown-timer" id="countdown">
+            <div class="countdown-item">
+              <span class="countdown-number" id="days"></span>
+              <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="hours"></span>
+              <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="minutes"></span>
+              <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="seconds"></span>
+              <span class="countdown-label">Segundos</span>
+            </div>
+          </div>
+          <div class="countdown-date">
+            <div class="countdown-date-line"></div>
+            <span class="countdown-date-text" data-wedding-date>20 de Noviembre del 2027</span>
+            <div class="countdown-date-line"></div>
+          </div>
+        </div>
+        <button class="player" type="button" aria-label="Reproducir música" aria-pressed="false"><i class="fa fa-play" aria-hidden="true"></i></button>
+        <div id="song" aria-live="polite"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Siempre contigo · Piano instrumental</div>
+      </div>
+      <!---------------------- end countdown------------------->
+
+    </header>
+    <!---------------------- Carousel-section ends here ------------------->
+
+
+
+  <!----------------------- Invitation-card-section starts here -------------------->
+  <div id="invitation_card_container" >
+    <div class="container-particles-js" id="particles-js">
+      <div class="envelope" id="VIP-CODE">
+        <div class="title-invitation"><h1><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Acceso de Invitados <i class="" aria-hidden="true"></i></h1></div>
+        <form id="consulta_invitado" class="form-inline">
+          <div class="form-group">
+            <label class="sr-only" for="id_invitado">Código de invitación</label><input type="text" class="form-control" id="id_invitado" placeholder="Ingrese su código de invitación" autocomplete="off" autocapitalize="characters" maxlength="40" aria-describedby="demo-code-hint guest-code-error" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="consulta-api">ENVIAR</button>
+        </form>
+        <p class="demo-code-hint" id="demo-code-hint">Esta invitación es de muestra. Usa <strong>GIFT</strong> para abrirla.</p>
+
+        <div class="loading">
+          <i class="fa fa-spinner fa-spin"></i> Cargando...
+        </div>
+        <div class="error-message" id="guest-code-error" role="alert">
+          <i class="fa fa-exclamation-circle"></i> Revisa tu código. Para explorar esta muestra, escribe GIFT.
+        </div>
+      </div>
+
+      <div class="envelope paper">
+        <div id="prueba">
+        </div>
+        <div><i class="bi bi-chevron-down"></i></div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!----------------------- Invitation-card-section ends here -------------------->
+<!----------------------- SECTION VIP  -------------------->
+<section id="section-to-guests">
+  <!----------------------- about-section starts here -------------------->
+         <div class="container about-section padding-both" id="about">
+              <div class="row ">
+                 <div class="col-lg-12">
+                  <div class="headings">
+                    <h1>NOSOTROS</h1>
+                    <h2>Tenemos algo que decirles</h2>
+                  </div>
+                 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 box">
+                  <div class="gender g-1">
+                    <h1 class="text-right">El Novio</h1>
+                    <p class="text-novio">Queridos amigos y familiares:<br><br>Hoy queremos invitarlos a celebrar una historia de amor que imaginamos para esta muestra. Cada encuentro, cada viaje y cada pequeño momento nos ha enseñado a elegirnos.<br><br>Acompáñennos a comenzar un nuevo capítulo y a brindar por todos los recuerdos que aún nos quedan por crear.</p>
+                     <div class="male text-right"> <i class="fa fa-male"></i>Gabriel Rivera · Personaje ficticio</div>
+
+
+                    <div class="social-icon text-right">
+                      <span class="demo-social" title="Red social de ejemplo">
+                        <span class="s-icon fa fa-twitter" aria-hidden="true"></span>
+                      </span>
+                      <span class="demo-social" title="Red social de ejemplo">
+                        <span class="s-icon fa fa-facebook" aria-hidden="true"></span>
+                      </span>
+                      <span class="demo-social" title="Red social de ejemplo">
+                        <span class="s-icon fa fa-linkedin" aria-hidden="true"></span>
+                      </span>
+                      <span class="demo-social" title="Red social de ejemplo">
+                        <span class="s-icon fa fa-instagram" aria-hidden="true"></span>
+                      </span>
+                  </div>
+
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 box2"><img data-src="img/about-1.jpg" alt="Retrato de Gabriel, personaje ficticio"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6  box2"><img data-src="img/about-2.jpg"  alt="Retrato de Elena, personaje ficticio"></div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 box">
+                  <div class="gender g-2">
+                    <h1>La Novia</h1>
+                    <p class="text-novia">Queridos amigos y familiares:<br><br>Hay personas que hacen más bonitos los días y convierten los planes sencillos en grandes aventuras. Hoy queremos compartir con ustedes la alegría de caminar juntos.<br><br>Los invitamos a celebrar nuestro sí, rodeados de las personas que queremos. Esta historia y sus protagonistas son ficticios.</p>
+
+
+                    <div class="male"><i class="fa fa-female"></i>Elena Navarro · Personaje ficticio</div>
+
+                    <div class="social-icon">
+                    <!-- Facebook -->
+                    <span class="demo-social" title="Red social de ejemplo">
+                      <span class="s-icon fa fa-facebook" aria-hidden="true"></span>
+                    </span>
+
+                    <!-- Twitter (sin link por ahora) -->
+                    <span class="s-icon fa fa-twitter" aria-hidden="true" title="Pronto"></span>
+
+                    <!-- LinkedIn (sin link por ahora) -->
+                    <span class="s-icon fa fa-linkedin" aria-hidden="true" title="Pronto"></span>
+
+                    <!-- Instagram -->
+                    <span class="demo-social" title="Red social de ejemplo">
+                      <span class="s-icon fa fa-instagram" aria-hidden="true"></span>
+                    </span>
+                  </div>
+
+                  </div>
+                </div>
+
+              </div>
+         </div>
+
+
+
+  <!----------------------- about-section Ends here -------------------->
+
+  <!--Phrase-section-->
+  <div class="container phrase-section">
+    <div class="background-overlay"></div>
+    <div class="elementor-shape elementor-shape-top" data-negative="false"></div>
+    <div class="elementor-shape elementor-shape-bottom" data-negative="false"></div>
+    <div class="phrase-container">
+      <div class="contenido">
+        <p class="quote"><i class="fa fa-quote-left"></i>
+          El amor nos encontró, y quedarnos fue elegirnos. Hoy prometemos ser casa, puerto y camino; sostenernos con ternura, escucharnos y construir juntos, siempre.<i class="fa fa-quote-right"></i></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!--------------------- Section pHrase --------------------->
+
+
+  <!---------------------- Event Section starts here ------------------->
+
+  <div class="container Event-section padding-both" id="event-section">
+    <div class="row ">
+      <div class="col-lg-12  ">
+       <div class="headings">
+         <h1>LA BODA</h1>
+         <h2>El Gran Día</h2>
+       </div>
+      </div>
+   </div>
+
+  <div class="row">
+     <div class="co-md-12 para-section">
+       <p>
+        Así como en el desembarco de Normadía, el día D, y el alunizaje, todo está
+        preparado y programado con un reloj suizo para que este día sea inolvidable.
+        <br><br>
+        Y como no podría ser de otra forma, será en la mejor ciudad del norte chico de Lima :
+        <br><strong>¡ Barranca !</strong>
+      </p>
+     </div>
+
+    <div class="col-md-12 col-sm-12  mein-event ">
+       <div class="col-md-6 col-sm-6 events event-left">
+         <img src="img/event-1.webp" alt="Decoración para la ceremonia">
+         <h1>" Boda Religiosa "</h1>
+         <h3><strong>CASA BLANCA  - GORRIONCITO</strong></h3>
+          <h3>Urb. La Florida Mz. R Lt. 14/ Calle Miguel Grau</h3>
+          <h3>( 04:00PM - 05:00PM )</h3>
+          <iframe title="Ubicación de Casa Blanca – Gorrioncito en Barranca" loading="lazy" src="https://www.google.com/maps?q=Casa%20Blanca%20Gorrioncito%2C%20Urb.%20La%20Florida%20Mz.%20R%20Lt.%2014%2C%20Calle%20Miguel%20Grau%2C%20Barranca%2C%20Per%C3%BA&amp;output=embed" width="400" height="300" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Casa%20Blanca%20Gorrioncito%2C%20Urb.%20La%20Florida%20Mz.%20R%20Lt.%2014%2C%20Calle%20Miguel%20Grau%2C%20Barranca%2C%20Per%C3%BA" rel="noopener" target="_blank" class="btn btn-primary btn-ruta"> Iniciar la ruta </a>
+          <!--Dale estilo css a este btn-ruta para que esté debajo del iframe centrado y tenga un estilo alucinante -->
+
+        </div>
+
+        <div class="col-md-6 col-sm-6 events event-right">
+          <img src="img/event-2.webp" alt="Decoración para la recepción">
+          <h1>" Recepción y Fiesta "</h1>
+          <h3> <strong> CASA BLANCA  - GORRIONCITO</strong> </h3>
+          <h3>Urb. La Florida Mz. R Lt. 14/ Calle Miguel Grau</h3>
+          <h3>( 05:00PM - A celebrar )</h3>
+          <iframe title="Ubicación de Casa Blanca – Gorrioncito en Barranca" loading="lazy" src="https://www.google.com/maps?q=Casa%20Blanca%20Gorrioncito%2C%20Urb.%20La%20Florida%20Mz.%20R%20Lt.%2014%2C%20Calle%20Miguel%20Grau%2C%20Barranca%2C%20Per%C3%BA&amp;output=embed" width="400" height="300" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Casa%20Blanca%20Gorrioncito%2C%20Urb.%20La%20Florida%20Mz.%20R%20Lt.%2014%2C%20Calle%20Miguel%20Grau%2C%20Barranca%2C%20Per%C3%BA" rel="noopener" target="_blank" class="btn btn-primary btn-ruta"> Iniciar la ruta </a>
+
+          <!--a partir del src del iframe con title="Ubicación de Casa Blanca" crea un https://www.google.com/maps/dir/?api= -->
+
+
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+
+<!----------------------- Event Section Ends here -------------------->
+  <!--------------------- Story section starts here --------------------->
+
+  <section id="Protocol-section">
+    <div class="container story-section padding-both" id="story">
+
+    <div class="row mb-6">
+      <div class="col-lg-12">
+       <div class="headings" >
+         <h1>RECOMENDACIONES</h1>
+         <h2>Los pequeños detalles importan</h2>
+       </div>
+      </div>
+   </div>
+
+   <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">
+      <div class="col-md-6 col-sm-6 col-xs-12  s-box1 text-right border-r"><img src="img/story-1.jpg"  alt="Una celebración para comenzar una vida juntos"></div>
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2">
+        <h1>¡ COMIENZO DE UN SUEÑO !</h1>
+       <h3>¡ El inicio de nuestra vida !</h3>
+       <p>
+        Estamos emocionados por dar este gran paso y escribir este nuevo capítulo
+        de nuestra historia como esposos.
+        ¡Queremos que nos acompañen y sean parte
+        del hermoso comienzo de un sueño tan especial como este!
+       </p>
+      </div>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2 border-r">
+        <h1>¡ VESTIMENTA DE GALA !</h1>
+       <h3>¡ Luciremos radiantes !</h3>
+       <p>
+        Para esta velada de celebración, <strong>solicitamos</strong> que su
+        vestimenta sea de gala. Con el fin de complementar
+        la atmósfera de la boda, les agradeceríamos
+        <strong>evitar los tonos BLANCO, ROJO, NARANJA Y DORADO</strong> en sus atuendos.
+      </p>
+      </div>
+
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box1 "><img src="img/story-2.jpg" alt="Inspiración de vestimenta de gala"></div>
+    </div>
+   </div>
+
+
+   <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box1 text-right border-r"><img src="img/story-3.jpg" alt="Detalles para celebrar con alegría"></div>
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2">
+        <h1>¡EL ESTADO DE ÁNIMO!</h1>
+       <h3>¡Ven con la mejor actitud!</h3>
+       <p>
+        Sabemos que pueden ocurrir imprevistos, ¡pero este día será inolvidable!
+         Queremos que vengan felices y con muchas ganas de celebrar con nosotros.
+       </p>
+      </div>
+    </div>
+   </div>
+
+
+   <div class="row" id="last-story">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2 border-r">
+        <h1>¡LAS BEBIDAS!</h1>
+       <h3>¿Listos para brindar?</h3>
+       <p>
+        ¡No se preocupen por la diversión! Tendremos una estación con diferentes
+        cócteles y cerveza lista para que disfruten al máximo. Si prefieren
+        otra bebida especial, ¡siéntanse libres de traerla y compartirla
+        con nosotros! <strong>¡Celebremos juntos y hagamos de esta noche algo inolvidable!</strong>
+        </p>
+      </div>
+
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box1"><img src="img/story-4.webp" alt="Un brindis por los novios"></div>
+    </div>
+   </div>
+
+
+    </div>
+
+  </section>
+
+  <!--------------------- Story section starts here --------------------->
+
+  <!---------------------- REGALOS section starts here  ------------------>
+  <section id="regalos" class="regalos-section">
+    <div class="container regalos-container">
+      <div class="row">
+        <div class="headings">
+          <h1>REGALOS</h1>
+          <h2>¡ La felicidad no tiene precio,</h2>
+          <h2>pero tu contribución ayuda !</h2>
+        </div>
+      </div>
+
+      <div class="row message-section">
+        <div class="para-section">
+          <p>
+            ¿Te gustaría hacernos un regalo pero no sabes qué? No te preocupes,
+            tenemos la solución : ¡Efectivo! , ese regalo universal que nunca falla
+            en sacarnos una sonrisa y que nos será de gran ayuda durante el comienzo de una nueva etapa juntos.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="row regalos-row">
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="svg/demo-bank.svg" alt="Logo bancario de muestra; cuentas ficticias">
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>BANCO DE EJEMPLO - NOVIO</h3>
+            <p>Cta. Soles : <span class="cuenta">XXX-XXX-XXXXXXXXXXXX-XX</span></p>
+            <p>Cta. Interbancaria Soles :<br>
+              <span class="cuenta">
+              XXX-XXX-XXXXXXXXXXXX-XX
+            </span>
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>BANCO DE EJEMPLO - NOVIA</h3>
+            <p>Cta. Soles : <span class="cuenta">XXX-XXX-XXXXXXXXXXXX-XX</span></p>
+            <p>Cta. Interbancaria Soles :<br>
+              <span class="cuenta">
+                XXX-XXX-XXXXXXXXXXXX-XX
+            </span>
+            </p>
+            <p>
+              <span class="cuenta">
+
+              </span>
+              </p>
+          </div>
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="svg/demo-bank.svg" alt="Logo bancario de muestra; cuentas ficticias">
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="row regalos-row">
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="svg/demo-payment.svg" alt="Marcador de ejemplo; no es un QR de pago">
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>YAPE - NOVIO</h3>
+            <p> </p>
+            <p><span class="celular-yape"><i class="glyphicon glyphicon-earphone gly-yape"></i>
+               XXX XXX XXX</span></p>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>YAPE - NOVIA</h3>
+            <p></p>
+            <p><span class="celular-yape"><i class="glyphicon glyphicon-earphone gly-yape"></i>
+               XXX XXX XXX</span></p>
+          </div>
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="svg/demo-payment.svg" alt="Marcador de ejemplo; no es un QR de pago">
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="row message-section">
+        <div class="para-section">
+          <p>
+            ¡Oh, pero si quieres sorprendernos con otra cosa, no te preocupes!
+            Nos encantaría recibir cualquier detalle que salga de tu corazón y tenga un toque
+             personal. Nosotros apreciamos mucho el
+             cariño y la estima que nos demuestran. ¡Gracias de antemano por tu generosidad!
+          </p>
+        </div>
+
+      </div>
+
+      <div class="row regalos-row">
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="svg/demo-payment.svg" alt="Marcador de ejemplo; no es un QR de pago">
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <div class="row">
+              <h3>Dirección en Barranca</h3>
+            </div>
+            <div class="row">
+              <div class="col-svg">
+                <i class="glyphicon glyphicon-map-marker"></i>
+              </div>
+              <div class="col-dirección">
+                <p>
+                  <span class="cuenta">
+                    Dirección de ejemplo XXX<br>
+                    Manzana XX, lote XX<br>
+                  </span>
+                  Urbanización de ejemplo<br>
+                  Referencia de ejemplo<br>
+                  Sin domicilio personal publicado
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-svg">
+                <i class="glyphicon glyphicon-map-marker"></i>
+              </div>
+              <div class="col-dirección">
+                <p>
+                  <span class="cuenta">
+                    Dirección de ejemplo XXX<br>
+                  </span>
+                  " Punto de entrega de ejemplo "
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+<!----------------------- REGALOS section Ends here  ------------------->
+
+
+
+  <!-------------------- Gallary section starts here -------------------->
+
+  <section class="container-fluid Gallary-section padding-both" id="gallary" aria-labelledby="gallery-title">
+
+    <div class="row ">
+      <div class="col-lg-12 ">
+       <div class="headings">
+         <h1 id="gallery-title">GALERÍA</h1>
+         <h2>¡ Recordar es volver a vivir !</h2>
+         <p class="gallery-intro">Pequeños momentos, recuerdos para siempre.</p>
+       </div>
+      </div>
+   </div>
+
+   <div class="gallary owl-carousel-2 owl-carousel owl-theme" role="region" aria-roledescription="carrusel" aria-label="Recuerdos de la pareja de muestra">
+      <div class="item">
+        <button type="button" class="gallery-photo" data-gallery-index="0" data-caption="Un cumpleaños para recordar" aria-label="Ampliar: un cumpleaños para recordar" style="--photo-position:50% 45%">
+          <img src="img/gallery-1.jpg" alt="Elena y Gabriel, pareja ficticia, celebran un cumpleaños juntos" width="1086" height="1448" loading="lazy" decoding="async">
+          <span class="gallery-photo-caption" aria-hidden="true">Un cumpleaños para recordar</span>
+          <span class="gallery-zoom" aria-hidden="true"><i class="fa fa-expand"></i></span>
+        </button>
+      </div>
+
+      <div class="item">
+        <button type="button" class="gallery-photo" data-gallery-index="1" data-caption="La alegría de elegirnos" aria-label="Ampliar: la alegría de elegirnos" style="--photo-position:53% 45%">
+          <img src="img/gallery-2.jpg" alt="La pareja ficticia entre flores y un ramo de celebración" width="1447" height="1087" loading="lazy" decoding="async">
+          <span class="gallery-photo-caption" aria-hidden="true">La alegría de elegirnos</span>
+          <span class="gallery-zoom" aria-hidden="true"><i class="fa fa-expand"></i></span>
+        </button>
+      </div>
+
+      <div class="item">
+        <button type="button" class="gallery-photo" data-gallery-index="2" data-caption="Nuestro lugar es estar juntos" aria-label="Ampliar: nuestro lugar es estar juntos" style="--photo-position:50% 48%">
+          <img src="img/gallery-3.jpg" alt="Elena y Gabriel ficticios durante un viaje por las montañas" width="1085" height="1449" loading="lazy" decoding="async">
+          <span class="gallery-photo-caption" aria-hidden="true">Nuestro lugar es estar juntos</span>
+          <span class="gallery-zoom" aria-hidden="true"><i class="fa fa-expand"></i></span>
+        </button>
+      </div>
+
+      <div class="item">
+        <button type="button" class="gallery-photo" data-gallery-index="3" data-caption="Cada logro, compartido" aria-label="Ampliar: cada logro compartido" style="--photo-position:50% 40%">
+          <img src="img/gallery-4.jpg" alt="La pareja ficticia comparte una celebración de graduación" width="1086" height="1448" loading="lazy" decoding="async">
+          <span class="gallery-photo-caption" aria-hidden="true">Cada logro, compartido</span>
+          <span class="gallery-zoom" aria-hidden="true"><i class="fa fa-expand"></i></span>
+        </button>
+      </div>
+
+      <div class="item">
+        <button type="button" class="gallery-photo" data-gallery-index="4" data-caption="La felicidad en lo cotidiano" aria-label="Ampliar: la felicidad en lo cotidiano" style="--photo-position:50% 42%">
+          <img src="img/gallery-5.jpg" alt="Un retrato cotidiano de Elena y Gabriel, personajes ficticios" width="1086" height="1448" loading="lazy" decoding="async">
+          <span class="gallery-photo-caption" aria-hidden="true">La felicidad en lo cotidiano</span>
+          <span class="gallery-zoom" aria-hidden="true"><i class="fa fa-expand"></i></span>
+        </button>
+      </div>
+
+      <div class="item">
+        <button type="button" class="gallery-photo" data-gallery-index="5" data-caption="Nuestra pequeña gran familia" aria-label="Ampliar: nuestra pequeña gran familia" style="--photo-position:50% 45%">
+          <img src="img/gallery-6.jpg" alt="La pareja ficticia celebra junto a su perro" width="1086" height="1448" loading="lazy" decoding="async">
+          <span class="gallery-photo-caption" aria-hidden="true">Nuestra pequeña gran familia</span>
+          <span class="gallery-zoom" aria-hidden="true"><i class="fa fa-expand"></i></span>
+        </button>
+      </div>
+
+  </div>
+
+
+
+    <div class="gallery-toolbar">
+      <p>Desliza para explorar. Toca una foto para verla completa.</p>
+      <button type="button" id="gallery-autoplay" aria-pressed="false" aria-label="Pausar galería"><i class="fa fa-pause" aria-hidden="true"></i><span class="gallery-play-state">Pausar galería</span></button>
+    </div>
+  </section>
+
+
+
+  <!--------------------- Gallary section Ends here --------------------->
+
+
+   <!----------------- Family_Friedn section starts here --------------->
+
+  <div class="container friend_family-section padding-both" id="family">
+    <div class="row ">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <div class="headings">
+         <h1>NUESTRAS FAMILIAS</h1>
+         <h2>Uniendo Historias</h2>
+       </div>
+      </div>
+   </div>
+
+   <div class="row ">
+
+    <div class="friend_family">
+
+       <div class="familys">
+        <img src="img/groomsmen-1.jpg" alt="Familia ficticia del novio">
+         <h1>Familia del Novio</h1>
+         <h3>Familia Rivera · Ficticia</h3>
+         <p><strong>Novio:</strong> Mi familia ha estado presente en los días de alegría y en los nuevos comienzos. En esta historia de ejemplo, sus consejos y su cariño nos enseñan el valor de estar juntos.<br><br>Hoy celebramos la unión de dos caminos y agradecemos a quienes nos acompañan con una sonrisa y un abrazo.<br><br>Estos nombres, vínculos e historias son ficticios y se personalizan para cada pareja.</p>
+         <div class="social-icon">
+          <span class="s-icon fa fa-angle-double-left"></span>
+          <span class="s-icon fa fa-heart"></span>
+          <span class="s-icon fa fa-angle-double-right"></span>
+        </div>
+       </div>
+
+       <div class="familys">
+        <img src="img/groomsmen-2.jpg" alt="Familia ficticia de la novia">
+        <h1>Familia de la Novia</h1>
+        <h3> Familia Navarro · Ficticia</h3>
+        <p><strong>Novia:</strong> En cada celebración hay recuerdos que vienen de casa: una mesa compartida, una palabra de ánimo y personas que nos enseñaron a querer.<br><br>Con gratitud por esos momentos, comenzamos una nueva etapa y abrimos espacio para crear tradiciones juntos.<br><br>Esta familia y su historia son ficticias. La muestra no contiene datos de las familias del evento de origen.</p>
+        <div class="social-icon">
+          <span class="s-icon fa fa-angle-double-left"></span>
+          <span class="s-icon fa fa-heart"></span>
+          <span class="s-icon fa fa-angle-double-right"></span>
+      </div>
+
+
+    </div>
+
+ </div>
+
+
+
+  </div>
+
+   <!----------------- Family_Friedn section Ends here --------------->
+
+
+
+
+
+  </section>
+
+   <!----------------- footer-section starts here ---------------------->
+   <div class="container-fluid footer-section padding-both">
+
+    <div class="row ">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <div class="headings">
+
+         <h2>¡ Gracias por tanto !</h2>
+       </div>
+      </div>
+   </div>
+
+
+   <div class="row">
+     <div class="col-md-12">
+      <p class="para-style"></p> <p>Una invitación de muestra, hecha para personalizar</p>
+
+      <div class="copyrights">
+        <p>&copy; <span class="c-o">Developer </span> Designed by <span class="c-o">Wedding Classic</span></p>
+      </div>
+
+     </div>
+   </div>
+
+   </div>
+
+   <!----------------- footer-section Ends here ---------------------->
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+       <!------------------------- font-awesome 5 starts here  --------------------------------->
+     <!------------------------- font-awesome starts here  --------------------------------->
+
+      <!-------------------------owl-carousel  starts here  --------------------------------->
+
+
+     <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+      <!-------------------------owl-carousel  ends here  --------------------------------->
+
+
+
+     <!----------------------------------- js links starts ------------------------------>
+     <script src="js/demo-config.js"></script>
+     <script src="js/motion.js"></script>
+     <script src="js/script.js"></script>
+     <script src="js/gallery.js"></script>
+     <script src="js/refinements.js"></script>
+     <script src="js/particles.js"></script>
+     <script src="js/app.js"></script>
+     <!----------------------------------- js links ends ------------------------------>
+  <section class="demo-promo" aria-labelledby="demo-promo-title"><p>Diseño de invitaciones digitales</p><h2 id="demo-promo-title">Tu historia, tu propia invitación.</h2><p>Esta boda es una muestra con personajes ficticios. El diseño, las fotos y cada detalle se pueden personalizar para tu celebración.</p><div><a class="demo-contact" href="https://github.com/Egomaniac95" target="_blank" rel="noopener noreferrer">Conocer al diseñador</a><a href="https://egomaniac95.github.io/wedding-demo-modern/">Ver la versión moderna</a></div><small>Muestra comercial. Sin pagos ni confirmaciones reales.</small></section>
+</body>
+</html>
